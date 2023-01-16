@@ -27,3 +27,5 @@ sed -i "7i uci set network.lan.netmask='255.255.255.0'" ./package/lean/default-s
 sed -i "8i uci set network.lan.gateway='192.168.22.254'" ./package/lean/default-settings/files/zzz-default-settings  # 默认网关地址（主路由 IP）
 sed -i "9i uci set network.lan.dns='192.168.22.2'" ./package/lean/default-settings/files/zzz-default-settings  # 默认上游 DNS 地址
 sed -i "10i uci commit network\n" ./package/lean/default-settings/files/zzz-default-settings
+# 删除默认密码
+sed -i "@UserPasswd" ./package/lean/default-settings/files/zzz-default-settings
