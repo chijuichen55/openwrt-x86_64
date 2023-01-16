@@ -28,4 +28,4 @@ sed -i "8i uci set network.lan.gateway='192.168.22.254'" ./package/lean/default-
 sed -i "9i uci set network.lan.dns='192.168.22.2'" ./package/lean/default-settings/files/zzz-default-settings  # 默认上游 DNS 地址
 sed -i "10i uci commit network\n" ./package/lean/default-settings/files/zzz-default-settings
 # 删除默认密码
-sed -i "@UserPasswd" ./package/lean/default-settings/files/zzz-default-settings
+#sed -i "@UserPasswd" ./package/lean/default-settings/files/zzz-default-settings
